@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare e-residency programs and IT incentives across Estonia, Uzbekistan, Kazakhstan, and Georgia. Side-by-side comparison of taxes, costs, and requirements.">
+    <title>E-Residency & IT Program Comparison | 4 Countries</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/comparison.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                🌍 E-Residency Compare
+            </a>
+
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html">Home</a>
+
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        Countries
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="estonia.html">🇪🇪 Estonia</a>
+                        <a href="uzbekistan.html">🇺🇿 Uzbekistan</a>
+                        <a href="kazakhstan.html">🇰🇿 Kazakhstan</a>
+                        <a href="georgia.html">🇬🇪 Georgia</a>
+                    </div>
+                </div>
+
+                <a href="comparison.html" class="active">Comparison</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-spacer"></div>
+
+    <!-- Comparison Header -->
+    <header class="comparison-header">
+        <div class="container">
+            <h1>Compare E-Residency & IT Programs</h1>
+            <p>Side-by-side comparison of Estonia, Uzbekistan, Kazakhstan, and Georgia</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Filters -->
+        <div class="comparison-filters">
+            <div class="filter-group">
+                <label>View:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Details</button>
+                    <button class="filter-btn" data-filter="tax">Tax Only</button>
+                    <button class="filter-btn" data-filter="cost">Cost Only</button>
+                    <button class="filter-btn" data-filter="setup">Setup Process</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-container">
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table-main">
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th data-country="estonia">
+                                <div class="country-header-cell">
+                                    <div class="country-flag-small">
+                                        <div style="background: linear-gradient(to bottom, #0072CE 33%, #000 33%, #000 66%, #fff 66%); width: 100%; height: 100%;"></div>
+                                    </div>
+                                    <span>Estonia</span>
+                                </div>
+                            </th>
+                            <th data-country="uzbekistan">
+                                <div class="country-header-cell">
+                                    <div class="country-flag-small">
+                                        <div style="background: linear-gradient(to bottom, #1EB53A 33%, #fff 33%, #fff 50%, #1EB53A 50%, #1EB53A 66%, #CE1126 66%); width: 100%; height: 100%;"></div>
+                                    </div>
+                                    <span>Uzbekistan</span>
+                                </div>
+                            </th>
+                            <th data-country="kazakhstan">
+                                <div class="country-header-cell">
+                                    <div class="country-flag-small">
+                                        <div style="background: #00A3D0; width: 100%; height: 100%; position: relative;">
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFCD00; font-size: 24px;">☀</div>
+                                        </div>
+                                    </div>
+                                    <span>Kazakhstan</span>
+                                </div>
+                            </th>
+                            <th data-country="georgia">
+                                <div class="country-header-cell">
+                                    <div class="country-flag-small">
+                                        <div style="background: linear-gradient(to bottom, #fff 40%, #fff 40%, #fff 60%, #FF0000 60%); width: 100%; height: 100%;"></div>
+                                    </div>
+                                    <span>Georgia</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Program Basics Category -->
+                        <tr class="category-header" data-category="basics">
+                            <td colspan="5">Program Basics</td>
+                        </tr>
+                        <tr data-category="basics">
+                            <td>Program Name</td>
+                            <td>E-Residency</td>
+                            <td>IT Park Residency</td>
+                            <td>Astana Hub</td>
+                            <td>Virtual Zone Status</td>
+                        </tr>
+                        <tr data-category="basics">
+                            <td>Program Type</td>
+                            <td>Digital Identity</td>
+                            <td>Tech Park</td>
+                            <td>Tech Park</td>
+                            <td>Tax Status</td>
+                        </tr>
+                        <tr data-category="basics">
+                            <td>Target Audience</td>
+                            <td>Global entrepreneurs</td>
+                            <td>IT companies</td>
+                            <td>Tech startups</td>
+                            <td>IT exporters</td>
+                        </tr>
+
+                        <!-- Remote Management Category -->
+                        <tr class="category-header" data-category="remote">
+                            <td colspan="5">Remote Management</td>
+                        </tr>
+                        <tr data-category="remote">
+                            <td>100% Online Setup</td>
+                            <td><span class="icon-check">✓</span> Yes</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-check">✓</span> Yes</td>
+                            <td><span class="icon-partial">~</span> Partially</td>
+                        </tr>
+                        <tr data-category="remote">
+                            <td>Physical Visit Required</td>
+                            <td>Once (card pickup)</td>
+                            <td>Yes (initial setup)</td>
+                            <td>No (optional)</td>
+                            <td>Recommended</td>
+                        </tr>
+                        <tr data-category="remote">
+                            <td>Remote Management</td>
+                            <td><span class="icon-check">✓</span> Full</td>
+                            <td><span class="icon-check">✓</span> Full</td>
+                            <td><span class="icon-check">✓</span> Full</td>
+                            <td><span class="icon-check">✓</span> Full</td>
+                        </tr>
+
+                        <!-- Costs Category -->
+                        <tr class="category-header" data-category="costs">
+                            <td colspan="5">Costs & Fees</td>
+                        </tr>
+                        <tr data-category="costs">
+                            <td>Application/Registration Fee</td>
+                            <td>€150 (e-residency)</td>
+                            <td>~$30 (LLC)</td>
+                            <td>Free</td>
+                            <td>~$35-70 (LLC)</td>
+                        </tr>
+                        <tr data-category="costs">
+                            <td>Company Registration</td>
+                            <td>€265</td>
+                            <td>Included</td>
+                            <td>~$100-300</td>
+                            <td>Included in LLC</td>
+                        </tr>
+                        <tr data-category="costs">
+                            <td>Total Initial Setup</td>
+                            <td class="value-bad">€415-615 (~$450-670)</td>
+                            <td class="value-good">$500-1,000</td>
+                            <td class="value-good">$0-600</td>
+                            <td class="value-good">$400-800</td>
+                        </tr>
+                        <tr data-category="costs">
+                            <td>Annual Ongoing Costs</td>
+                            <td class="value-bad">€1,200-3,000</td>
+                            <td class="value-good">$500-1,500</td>
+                            <td class="value-neutral">$500-2,000</td>
+                            <td class="value-good">$600-2,000</td>
+                        </tr>
+                        <tr data-category="costs">
+                            <td>Minimum Capital Required</td>
+                            <td>€0.01</td>
+                            <td>Minimal</td>
+                            <td>Minimal</td>
+                            <td>None</td>
+                        </tr>
+
+                        <!-- Timeline Category -->
+                        <tr class="category-header" data-category="timeline">
+                            <td colspan="5">Timeline</td>
+                        </tr>
+                        <tr data-category="timeline">
+                            <td>Application Processing</td>
+                            <td>2-6 weeks</td>
+                            <td>5-10 days</td>
+                            <td>Up to 15 days</td>
+                            <td>~12 days</td>
+                        </tr>
+                        <tr data-category="timeline">
+                            <td>Company Registration</td>
+                            <td>1 business day</td>
+                            <td>1-2 days</td>
+                            <td>1-5 days</td>
+                            <td>1-2 days</td>
+                        </tr>
+                        <tr data-category="timeline">
+                            <td>Total Setup Time</td>
+                            <td class="value-bad">2-8 weeks</td>
+                            <td class="value-good">1-2 weeks</td>
+                            <td class="value-good">2-3 weeks</td>
+                            <td class="value-good">2-4 weeks</td>
+                        </tr>
+
+                        <!-- Taxation Category -->
+                        <tr class="category-header" data-category="taxation">
+                            <td colspan="5">Taxation</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>Corporate Income Tax</td>
+                            <td>24% (0% retained)</td>
+                            <td class="value-good">0% until 2040</td>
+                            <td class="value-good">0%</td>
+                            <td class="value-good">0% (foreign income)</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>VAT Rate</td>
+                            <td>24%</td>
+                            <td class="value-good">0%</td>
+                            <td>12% (standard)</td>
+                            <td class="value-good">0% (exports)</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>Dividend Tax</td>
+                            <td>Included in 24%</td>
+                            <td>5% (>50% exports)</td>
+                            <td>0% for foreigners</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>Personal Income Tax</td>
+                            <td>24%</td>
+                            <td>7.5% (reduced)</td>
+                            <td>0% (foreigners)</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>Social Contributions</td>
+                            <td>33% (employer)</td>
+                            <td class="value-good">0%</td>
+                            <td class="value-good">0% (foreigners)</td>
+                            <td>Minimal</td>
+                        </tr>
+                        <tr data-category="taxation">
+                            <td>Tax Holiday Duration</td>
+                            <td>Permanent</td>
+                            <td class="value-highlight">Until 2040 (14+ years)</td>
+                            <td>Ongoing</td>
+                            <td>Ongoing</td>
+                        </tr>
+
+                        <!-- Requirements Category -->
+                        <tr class="category-header" data-category="requirements">
+                            <td colspan="5">Requirements</td>
+                        </tr>
+                        <tr data-category="requirements">
+                            <td>Eligibility</td>
+                            <td>Open to all*</td>
+                            <td>Uzbek LLC required</td>
+                            <td>Tech/IT business</td>
+                            <td>Georgian LLC only</td>
+                        </tr>
+                        <tr data-category="requirements">
+                            <td>Local Director Required</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                        </tr>
+                        <tr data-category="requirements">
+                            <td>Contact Person/Address</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                        </tr>
+                        <tr data-category="requirements">
+                            <td>Minimum Employees</td>
+                            <td><span class="icon-cross">✗</span> None</td>
+                            <td><span class="icon-cross">✗</span> None</td>
+                            <td><span class="icon-cross">✗</span> None</td>
+                            <td><span class="icon-cross">✗</span> None</td>
+                        </tr>
+                        <tr data-category="requirements">
+                            <td>Export Requirement</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-partial">~</span> Optional (for benefits)</td>
+                            <td><span class="icon-cross">✗</span> No</td>
+                            <td><span class="icon-check">✓</span> Foreign clients only</td>
+                        </tr>
+
+                        <!-- Banking Category -->
+                        <tr class="category-header" data-category="banking">
+                            <td colspan="5">Banking & Financial</td>
+                        </tr>
+                        <tr data-category="banking">
+                            <td>Banking Difficulty</td>
+                            <td class="value-bad">Medium-Hard</td>
+                            <td class="value-neutral">Medium</td>
+                            <td class="value-neutral">Medium</td>
+                            <td class="value-neutral">Medium</td>
+                        </tr>
+                        <tr data-category="banking">
+                            <td>Local Banks Available</td>
+                            <td>LHV, limited</td>
+                            <td>Multiple options</td>
+                            <td>Multiple options</td>
+                            <td>TBC, BoG, others</td>
+                        </tr>
+                        <tr data-category="banking">
+                            <td>International Banking</td>
+                            <td class="value-good">Wise, Payoneer, EMIs</td>
+                            <td>Limited</td>
+                            <td>Developing</td>
+                            <td class="value-good">Good access</td>
+                        </tr>
+                        <tr data-category="banking">
+                            <td>Payment Processing</td>
+                            <td class="value-good">Excellent (EU)</td>
+                            <td>Limited</td>
+                            <td>Developing</td>
+                            <td class="value-good">Good</td>
+                        </tr>
+
+                        <!-- Operations Category -->
+                        <tr class="category-header" data-category="operations">
+                            <td colspan="5">Operations & Compliance</td>
+                        </tr>
+                        <tr data-category="operations">
+                            <td>Monthly Reporting</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                            <td><span class="icon-check">✓</span> Required</td>
+                        </tr>
+                        <tr data-category="operations">
+                            <td>English Support</td>
+                            <td class="value-good">Excellent</td>
+                            <td class="value-neutral">Moderate</td>
+                            <td class="value-good">Good</td>
+                            <td class="value-good">Good</td>
+                        </tr>
+                        <tr data-category="operations">
+                            <td>Accounting Complexity</td>
+                            <td class="value-neutral">Medium</td>
+                            <td class="value-good">Low</td>
+                            <td class="value-neutral">Medium</td>
+                            <td class="value-neutral">Medium</td>
+                        </tr>
+                        <tr data-category="operations">
+                            <td>Digital Infrastructure</td>
+                            <td class="value-good">Excellent (e-services)</td>
+                            <td class="value-neutral">Developing</td>
+                            <td class="value-good">Good</td>
+                            <td class="value-good">Good</td>
+                        </tr>
+                        <tr data-category="operations">
+                            <td>International Recognition</td>
+                            <td class="value-good">Excellent (EU)</td>
+                            <td class="value-neutral">Moderate</td>
+                            <td class="value-neutral">Moderate</td>
+                            <td class="value-good">Good</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Summary Recommendations -->
+        <div class="comparison-summary">
+            <h2>Which Country is Best For You?</h2>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Best for Established Companies</h3>
+                    <p class="country-name">🇪🇪 Estonia</p>
+                    <p>EU credibility, excellent digital infrastructure, 0% tax on retained profits. Ideal if you value international recognition and plan to reinvest profits.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Best for Maximum Tax Savings</h3>
+                    <p class="country-name">🇺🇿 Uzbekistan</p>
+                    <p>0% on ALL taxes until 2040 - the longest and most comprehensive tax holiday. Lowest operational costs. Perfect for bootstrapped startups prioritizing savings.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Best for Tech Startups & Scaling</h3>
+                    <p class="country-name">🇰🇿 Kazakhstan</p>
+                    <p>0% tax, Digital Nomad Visa, investment access, and scaling programs. Great for startups planning to raise capital or relocate to Central Asia.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Best for Simplicity & Balance</h3>
+                    <p class="country-name">🇬🇪 Georgia</p>
+                    <p>0% on foreign income, 5% dividends, low costs, English-friendly. Excellent balance of tax benefits, ease of setup, and quality of life for digital nomads.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action CTA -->
+        <div class="text-center mt-xl mb-xl">
+            <h2>Ready to Learn More?</h2>
+            <p class="text-secondary mb-lg">Explore detailed guides for each country</p>
+            <div class="grid grid-4">
+                <a href="estonia.html" class="btn btn-secondary">🇪🇪 Estonia Details</a>
+                <a href="uzbekistan.html" class="btn btn-secondary">🇺🇿 Uzbekistan Details</a>
+                <a href="kazakhstan.html" class="btn btn-secondary">🇰🇿 Kazakhstan Details</a>
+                <a href="georgia.html" class="btn btn-secondary">🇬🇪 Georgia Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <p><strong>Disclaimer:</strong> This information is for educational purposes only. Tax rates, fees, and requirements may change. Always verify current information with official sources and consult with legal and tax professionals before making decisions.</p>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Residency Compare</h3>
+                    <p>Helping digital entrepreneurs and IT companies find the best jurisdiction for their remote business.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Countries</h3>
+                    <div class="footer-links footer-countries">
+                        <a href="estonia.html">🇪🇪 Estonia</a>
+                        <a href="uzbekistan.html">🇺🇿 Uzbekistan</a>
+                        <a href="kazakhstan.html">🇰🇿 Kazakhstan</a>
+                        <a href="georgia.html">🇬🇪 Georgia</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="comparison.html">Comparison</a>
+                        <a href="about.html">About & Sources</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Residency Compare. All rights reserved.</p>
+                <p class="footer-updated">Last updated: February 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/comparison.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+</body>
+</html>
