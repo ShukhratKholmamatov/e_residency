@@ -1,0 +1,363 @@
+/* SWOT Analysis Page Styles */
+
+.swot-hero {
+    background: var(--background-alt);
+    color: var(--text-primary);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.swot-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.swot-hero .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.swot-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--background-alt);
+    min-height: calc(100vh - 200px);
+}
+
+/* Slider Controls */
+.swot-slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.slider-arrow {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-arrow:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+.slider-arrow:active {
+    transform: scale(0.95);
+}
+
+.slider-indicator {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.current-slide {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* Slider Container */
+.swot-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swot-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-xl);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.swot-card.active {
+    display: block;
+    opacity: 1;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.swot-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--background-alt);
+}
+
+.swot-flag {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swot-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swot-title h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.swot-title p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.swot-box {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.swot-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.swot-box-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid currentColor;
+}
+
+.swot-icon {
+    font-size: 1.5rem;
+}
+
+.swot-box-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.swot-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.swot-box ul li {
+    padding: var(--spacing-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.swot-box ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Strengths - Green */
+.swot-box.strengths {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.swot-box.strengths .swot-box-header {
+    color: #059669;
+}
+
+.swot-box.strengths ul li::before {
+    color: #10b981;
+}
+
+/* Weaknesses - Orange */
+.swot-box.weaknesses {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.swot-box.weaknesses .swot-box-header {
+    color: #d97706;
+}
+
+.swot-box.weaknesses ul li::before {
+    color: #f59e0b;
+}
+
+/* Opportunities - Blue */
+.swot-box.opportunities {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.swot-box.opportunities .swot-box-header {
+    color: #2563eb;
+}
+
+.swot-box.opportunities ul li::before {
+    color: #3b82f6;
+}
+
+/* Threats - Red */
+.swot-box.threats {
+    border-color: #ef4444;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.swot-box.threats .swot-box-header {
+    color: #dc2626;
+}
+
+.swot-box.threats ul li::before {
+    color: #ef4444;
+}
+
+/* CTA Section */
+.swot-cta {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: white;
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-2xl);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.swot-cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .swot-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .swot-hero h1 {
+        font-size: 2rem;
+    }
+
+    .slider-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .slider-indicator {
+        font-size: 1rem;
+    }
+
+    .current-slide {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .swot-hero {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .swot-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .swot-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .swot-slider-controls {
+        gap: var(--spacing-md);
+    }
+
+    .slider-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+
+    .slider-indicator {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .current-slide {
+        font-size: 1.1rem;
+    }
+
+    .swot-card {
+        padding: var(--spacing-md);
+    }
+
+    .swot-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .swot-flag {
+        width: 60px;
+        height: 60px;
+    }
+
+    .swot-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .swot-box {
+        padding: var(--spacing-md);
+    }
+
+    .swot-box ul li {
+        font-size: 0.85rem;
+    }
+}

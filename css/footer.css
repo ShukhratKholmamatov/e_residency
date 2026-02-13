@@ -99,6 +99,14 @@
   margin-bottom: var(--spacing-lg);
 }
 
+.body-disclaimer{
+  background-color: var(--warning-light);
+  border-left: 4px solid var(--warning);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
 .footer-disclaimer p {
   color: var(--text-primary);
   font-size: var(--text-sm);
