@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme-preference')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Compare e-residency programs and IT incentives across Estonia, Uzbekistan, Kazakhstan, and Georgia. Side-by-side comparison of taxes, costs, and requirements.">
     <title>E-Residency & IT Program Comparison | 4 Countries</title>
@@ -45,9 +46,14 @@
                 </div>
 
                 <a href="comparison.html" class="active">Comparison</a>
+                <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                 <a href="swot.html">SWOT Analysis</a>
+                <a href="uzbekistan-reform.html">UZ Reform</a>
                 <a href="about.html">About</a>
             </div>
+
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -197,8 +203,8 @@
                         <tr data-category="costs">
                             <td>Application/Registration Fee</td>
                             <td>€150 (e-residency)</td>
-                            <td>~$100 (LLC)</td>
-                            <td>Free</td>
+                            <td>~$35 (LLC)</td>
+                            <td>$499/year (e-Residency)</td>
                             <td>~$35-70 (LLC)</td>
                             <td>$1,000-$5,000</td>
                         </tr>
@@ -214,7 +220,7 @@
                             <td>Total Initial Setup</td>
                             <td class="value-bad">€415-615 (~$450-670)</td>
                             <td class="value-good">~$1,000</td>
-                            <td class="value-good">$0-600</td>
+                            <td class="value-neutral">$600-1,000</td>
                             <td class="value-good">$400-800</td>
                             <td class="value-bad">$5,000-$15,000</td>
                         </tr>
@@ -528,6 +534,8 @@
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="comparison.html">Comparison</a>
+                        <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                         <a href="about.html">About & Sources</a>
                     </div>
                 </div>
@@ -544,5 +552,6 @@
     <script src="js/navigation.js"></script>
     <script src="js/comparison.js"></script>
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme-preference')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comparison of Uzbekistan's current business registration process vs the future process after Cabinet of Ministers Resolution No. 177 introduces the e-Residency platform for remote PINFL issuance.">
+    <title>Uzbekistan Registration Reform | Current vs Future Process</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/reform.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                🌍 E-Residency Compare
+            </a>
+
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html">Home</a>
+
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        Countries
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="estonia.html">🇪🇪 Estonia</a>
+                        <a href="uzbekistan.html">🇺🇿 Uzbekistan</a>
+                        <a href="kazakhstan.html">🇰🇿 Kazakhstan</a>
+                        <a href="georgia.html">🇬🇪 Georgia</a>
+                        <a href="uae.html">🇦🇪 UAE</a>
+                    </div>
+                </div>
+
+                <a href="comparison.html">Comparison</a>
+                <a href="steps.html">Quick Steps</a>
+                <a href="swot.html">SWOT Analysis</a>
+                <a href="uzbekistan-reform.html" class="active">UZ Reform</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-spacer"></div>
+
+    <!-- Header -->
+    <header class="reform-header">
+        <div class="container">
+            <h1>🇺🇿 Uzbekistan Registration Reform</h1>
+            <p>How the business registration process changes after the e-Residency platform is implemented under Resolution No. 177</p>
+            <div class="resolution-badge">
+                📜 Cabinet of Ministers Resolution No. 177 — 12 April 2022
+            </div>
+        </div>
+    </header>
+
+    <!-- Resolution Info -->
+    <div class="container">
+        <div class="resolution-info">
+            <h3>About Resolution No. 177</h3>
+            <p>The Cabinet of Ministers of the Republic of Uzbekistan adopted Resolution No. 177 (12 April 2022) titled <em>"On improving the procedure for determining and issuing a personal identification number of an individual (PINFL) in the Republic of Uzbekistan."</em> This decision modernizes the system of personal identifiers and includes provisions for issuing a PINFL to foreigners and stateless persons through an <strong>"e-Residency" platform</strong>. The government authorized the development of this platform through which foreigners can apply remotely to obtain a PINFL — eliminating the need for intermediaries and physical presence for this critical step.</p>
+        </div>
+
+        <!-- Side-by-side Comparison -->
+        <div class="reform-comparison">
+
+            <!-- LEFT: Current Process -->
+            <div class="reform-column current">
+                <div class="reform-column-header">
+                    <h2>Current Process</h2>
+                    <p>How it works today (without e-Residency platform)</p>
+                </div>
+
+                <div class="reform-steps">
+                    <!-- Step 1 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">1</div>
+                        <div class="reform-step-content">
+                            <h4>Contact IT Park & Prepare PoA</h4>
+                            <p>Contact IT Park to engage their specialists. Prepare a notarized & apostilled Power of Attorney so IT Park can act on your behalf.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-5 days</span>
+                                <span class="reform-badge cost">$730</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">2</div>
+                        <div class="reform-step-content">
+                            <h4>Get PINFL (via IT Park)</h4>
+                            <p>IT Park arranges your PINFL (14-digit personal ID number) through their intermediary services. Required for all e-government portals.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-3 days</span>
+                                <span class="reform-badge cost">~$35 state fees</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">3</div>
+                        <div class="reform-step-content">
+                            <h4>Register LLC with Ministry of Justice</h4>
+                            <p>IT Park registers your LLC using power of attorney. Charter, STIR (tax ID), legal address assigned.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-2 days</span>
+                                <span class="reform-badge cost">~$35</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">4</div>
+                        <div class="reform-step-content">
+                            <h4>Open Business Bank Account</h4>
+                            <p>Founder must appear in person for KYC verification. Power of attorney NOT accepted for banking.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-3 days</span>
+                                <span class="reform-badge visit">Physical visit required</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">5</div>
+                        <div class="reform-step-content">
+                            <h4>Submit IT Park Residency Application</h4>
+                            <p>IT Park submits your company's residency application to the Expert Commission.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1 day</span>
+                                <span class="reform-badge cost">Included</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">6</div>
+                        <div class="reform-step-content">
+                            <h4>Expert Commission Review</h4>
+                            <p>IT Park Expert Commission reviews and verifies IT activity qualification.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">~15 biz days</span>
+                                <span class="reform-badge cost">Free</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">7</div>
+                        <div class="reform-step-content">
+                            <h4>Tax Registration & 0% Benefits Active</h4>
+                            <p>IT Park handles State Tax Committee registration. All tax benefits (0% CIT, VAT, Social) apply.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-2 days</span>
+                                <span class="reform-badge cost">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reform-column-footer">
+                    <div class="total-label">Total Estimated Cost</div>
+                    <div class="total-amount">~$765</div>
+                    <div class="total-timeline">Timeline: ~3-5 weeks</div>
+                </div>
+            </div>
+
+            <!-- RIGHT: After Reform -->
+            <div class="reform-column future">
+                <div class="reform-column-header">
+                    <h2>After e-Residency Reform</h2>
+                    <p>Once the e-Residency platform is operational</p>
+                </div>
+
+                <div class="reform-steps">
+                    <!-- Step 1 - NEW -->
+                    <div class="reform-step changed">
+                        <div class="reform-step-num">1</div>
+                        <div class="reform-step-content">
+                            <h4>Get PINFL via e-Residency Platform (Online)</h4>
+                            <p>Apply directly through the government's e-Residency platform to obtain your PINFL remotely. No intermediary needed. Self-service for foreigners.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge change-tag">New</span>
+                                <span class="reform-badge online">100% Online</span>
+                                <span class="reform-badge duration">TBD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 - Changed -->
+                    <div class="reform-step changed">
+                        <div class="reform-step-num">2</div>
+                        <div class="reform-step-content">
+                            <h4>Contact IT Park & Prepare PoA</h4>
+                            <p>Engage IT Park specialists for company registration. PINFL already obtained, so this step is simplified — IT Park focuses on LLC setup only.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge change-tag">Simplified</span>
+                                <span class="reform-badge duration">1-5 days</span>
+                                <span class="reform-badge cost">$730</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 - Same -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">3</div>
+                        <div class="reform-step-content">
+                            <h4>Register LLC with Ministry of Justice</h4>
+                            <p>IT Park registers your LLC using power of attorney. Charter, STIR (tax ID), legal address assigned.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-2 days</span>
+                                <span class="reform-badge cost">~$35</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 - Same -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">4</div>
+                        <div class="reform-step-content">
+                            <h4>Open Business Bank Account</h4>
+                            <p>Founder must still appear in person for KYC verification. This step remains unchanged.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-3 days</span>
+                                <span class="reform-badge visit">Physical visit still required</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 - Same -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">5</div>
+                        <div class="reform-step-content">
+                            <h4>Submit IT Park Residency Application</h4>
+                            <p>IT Park submits your company's residency application to the Expert Commission.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1 day</span>
+                                <span class="reform-badge cost">Included</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 - Same -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">6</div>
+                        <div class="reform-step-content">
+                            <h4>Expert Commission Review</h4>
+                            <p>IT Park Expert Commission reviews and verifies IT activity qualification.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">~15 biz days</span>
+                                <span class="reform-badge cost">Free</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 - Same -->
+                    <div class="reform-step">
+                        <div class="reform-step-num">7</div>
+                        <div class="reform-step-content">
+                            <h4>Tax Registration & 0% Benefits Active</h4>
+                            <p>IT Park handles State Tax Committee registration. All tax benefits (0% CIT, VAT, Social) apply.</p>
+                            <div class="reform-badges">
+                                <span class="reform-badge duration">1-2 days</span>
+                                <span class="reform-badge cost">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reform-column-footer">
+                    <div class="total-label">Total Estimated Cost</div>
+                    <div class="total-amount">~$765 (potentially less)</div>
+                    <div class="total-timeline">Timeline: ~3-5 weeks</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Differences Summary -->
+        <section class="reform-summary">
+            <h2>Key Differences</h2>
+
+            <div class="reform-diff-grid">
+                <div class="reform-diff-card">
+                    <h4>🌐 Remote PINFL Access</h4>
+                    <p><strong>Before:</strong> PINFL only obtainable through IT Park intermediary services using power of attorney.<br>
+                    <strong>After:</strong> Foreigners can apply for PINFL directly via the government's e-Residency platform — fully online, no intermediary needed.</p>
+                </div>
+
+                <div class="reform-diff-card">
+                    <h4>🔓 Greater Autonomy</h4>
+                    <p><strong>Before:</strong> Foreigners fully dependent on IT Park from the very first step.<br>
+                    <strong>After:</strong> PINFL obtained independently first, then IT Park engaged only for company registration — reducing dependency.</p>
+                </div>
+
+                <div class="reform-diff-card">
+                    <h4>💰 Potential Cost Savings</h4>
+                    <p><strong>Before:</strong> IT Park service fee ($730) covers PINFL arrangement + company setup.<br>
+                    <strong>After:</strong> With PINFL handled separately, IT Park's scope is reduced — potentially lower service fees.</p>
+                </div>
+
+                <div class="reform-diff-card unchanged">
+                    <h4>🏦 Bank Visit Still Required</h4>
+                    <p>The physical visit requirement for opening a bank account (KYC verification) remains unchanged. This is the only step that cannot be done remotely in either process.</p>
+                </div>
+
+                <div class="reform-diff-card">
+                    <h4>📊 Digital Government Integration</h4>
+                    <p>The e-Residency platform modernizes Uzbekistan's approach to foreign business registration, aligning with Estonia and Kazakhstan's e-Residency models for digital-first governance.</p>
+                </div>
+
+                <div class="reform-diff-card unchanged">
+                    <h4>⏱️ IT Park Review Unchanged</h4>
+                    <p>The Expert Commission review (~15 business days) and tax registration process remain the same. The core IT Park residency approval flow is not affected by Resolution No. 177.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Basis -->
+        <section class="reform-law-section">
+            <h2>Legal Basis: Resolution No. 177</h2>
+
+            <div class="reform-law-card">
+                <div class="reform-law-header">
+                    <span class="reform-law-icon">📜</span>
+                    <div>
+                        <h3>Cabinet of Ministers Resolution No. 177</h3>
+                        <p class="reform-law-date">Dated 12 April 2022</p>
+                    </div>
+                </div>
+
+                <p class="reform-law-title"><em>"On improving the procedure for determining and issuing a personal identification number of an individual (PINFL) in the Republic of Uzbekistan."</em></p>
+
+                <p>This decision modernizes the system of personal identifiers and includes provisions for issuing a PINFL to foreigners and stateless persons through the "e-Residency" platform.</p>
+
+                <h4>According to this resolution:</h4>
+                <ul class="reform-law-list">
+                    <li>The government authorized the development of an <strong>"e-Residency" platform</strong> through which foreigners and stateless persons can apply remotely to obtain a PINFL.</li>
+                    <li>The <strong>Ministry of Internal Affairs</strong> was designated as the operator responsible for creating this platform.</li>
+                    <li>The system was targeted for deployment by <strong>October 1, 2025</strong> to allow online PINFL issuance and reduce barriers for non-resident applicants.</li>
+                    <li>The document also requires related ministries to ensure that foreigners who get a PINFL can register in the <strong>Unified Identification System</strong> without obstacles.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Current Status -->
+        <section class="reform-status-section">
+            <div class="reform-status-card warning">
+                <div class="reform-status-icon">⚠️</div>
+                <h3>Current Status: Not Yet Implemented</h3>
+                <p>As of February 2026, the e-Residency platform has <strong>not yet been established</strong> despite the October 2025 target date set by Resolution No. 177. The platform remains under development. Foreigners must still obtain their PINFL through IT Park intermediary services using the current process described above.</p>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="reform-recommendation-section">
+            <h2>Recommendation</h2>
+
+            <div class="reform-recommendation-card">
+                <div class="reform-recommendation-header">
+                    <span class="reform-recommendation-icon">💡</span>
+                    <h3>Suggestion for Ministry Consideration</h3>
+                </div>
+
+                <p>We respectfully recommend <strong>prioritizing the early completion and launch of the e-Residency platform</strong> as outlined in Resolution No. 177. Accelerating this initiative would bring significant benefits to Uzbekistan's digital economy ecosystem:</p>
+
+                <ul class="reform-recommendation-list">
+                    <li><strong>Attract more foreign IT companies</strong> — A fully online PINFL process removes one of the biggest friction points for foreign entrepreneurs considering Uzbekistan's IT Park program.</li>
+                    <li><strong>Competitive positioning</strong> — Estonia and Kazakhstan already offer e-Residency platforms. Uzbekistan risks falling behind in the race for digital nomads and remote IT companies without a comparable solution.</li>
+                    <li><strong>Reduce administrative burden</strong> — Automating PINFL issuance through the platform would reduce the workload on the Ministry of Internal Affairs and IT Park staff, freeing resources for higher-value activities.</li>
+                    <li><strong>Strengthen the IT Park ecosystem</strong> — More foreign companies joining IT Park means more tax revenue (post-2040), more jobs, more technology transfer, and a stronger tech ecosystem for Uzbekistan.</li>
+                    <li><strong>Build on existing momentum</strong> — The legal framework (Resolution No. 177) is already in place. The technical requirements are well-defined. Early deployment would demonstrate Uzbekistan's commitment to digital governance and ease of doing business.</li>
+                </ul>
+
+                <div class="reform-recommendation-conclusion">
+                    <p>Implementing the e-Residency platform would position Uzbekistan alongside Estonia and Kazakhstan as a leading digital-first jurisdiction in the region, making the country's already competitive 0% IT tax regime even more accessible to the global tech community.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center mt-xl mb-xl" style="padding-bottom: var(--spacing-2xl);">
+            <a href="uzbekistan.html" class="btn btn-primary btn-large">← Back to Uzbekistan Full Guide</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <p><strong>Disclaimer:</strong> This information is for educational purposes only. Resolution No. 177 has been adopted but the e-Residency platform is still under development. Actual implementation timelines and procedures may vary. Always verify current information with official sources.</p>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Residency Compare</h3>
+                    <p>Helping digital entrepreneurs and IT companies find the best jurisdiction for their remote business.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Countries</h3>
+                    <div class="footer-links footer-countries">
+                        <a href="estonia.html">🇪🇪 Estonia</a>
+                        <a href="uzbekistan.html">🇺🇿 Uzbekistan</a>
+                        <a href="kazakhstan.html">🇰🇿 Kazakhstan</a>
+                        <a href="georgia.html">🇬🇪 Georgia</a>
+                        <a href="uae.html">🇦🇪 UAE</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="comparison.html">Comparison</a>
+                        <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
+                        <a href="about.html">About & Sources</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 E-Residency Compare. All rights reserved.</p>
+                <p class="footer-updated">Last updated: February 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/theme-toggle.js"></script>
+</body>
+</html>

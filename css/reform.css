@@ -1,0 +1,552 @@
+/* Reform Comparison Page */
+
+/* Header */
+.reform-header {
+    background: var(--background-alt);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.reform-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.reform-header p {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.reform-header .resolution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--primary-lighter);
+    color: var(--primary-dark);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    border: 1px solid var(--primary-light);
+}
+
+/* Two-column comparison grid */
+.reform-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-2xl) 0;
+}
+
+/* Column */
+.reform-column {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.reform-column-header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    text-align: center;
+    border-bottom: 2px solid var(--border);
+}
+
+.reform-column.current .reform-column-header {
+    background: var(--background-gray);
+}
+
+.reform-column.current .reform-column-header h2 {
+    color: var(--text-secondary);
+}
+
+.reform-column.future .reform-column-header {
+    background: var(--primary-lighter);
+}
+
+.reform-column.future .reform-column-header h2 {
+    color: var(--primary-dark);
+}
+
+.reform-column-header h2 {
+    font-size: var(--text-xl);
+    margin: 0 0 var(--spacing-xs) 0;
+}
+
+.reform-column-header p {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* Steps list inside column */
+.reform-steps {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+/* Individual step card */
+.reform-step {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--background);
+    transition: box-shadow var(--transition-fast);
+}
+
+.reform-step:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Changed / new step highlight */
+.reform-step.changed {
+    border-color: var(--accent);
+    border-width: 2px;
+    background: var(--accent-light);
+}
+
+.reform-step.removed {
+    border-color: var(--danger);
+    border-width: 2px;
+    border-style: dashed;
+    opacity: 0.6;
+}
+
+/* Step number */
+.reform-step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+}
+
+.reform-step.changed .reform-step-num {
+    background: var(--accent);
+}
+
+.reform-step.removed .reform-step-num {
+    background: var(--danger);
+    text-decoration: line-through;
+}
+
+/* Step content */
+.reform-step-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.reform-step-content h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+}
+
+.reform-step-content p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0 0 var(--spacing-sm) 0;
+    line-height: 1.5;
+}
+
+/* Badges inside step */
+.reform-badges {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.reform-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: var(--text-xs);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+}
+
+.reform-badge.duration {
+    background: var(--primary-lighter);
+    color: var(--primary-dark);
+}
+
+.reform-badge.cost {
+    background: var(--badge-cost-bg);
+    color: var(--badge-cost-text);
+}
+
+.reform-badge.visit {
+    background: var(--badge-visit-bg);
+    color: var(--badge-visit-text);
+}
+
+.reform-badge.online {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.reform-badge.change-tag {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Column total footer */
+.reform-column-footer {
+    padding: var(--spacing-lg);
+    background: var(--primary-lighter);
+    border-top: 2px solid var(--primary-light);
+    text-align: center;
+}
+
+.reform-column-footer .total-label {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reform-column-footer .total-amount {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--primary-dark);
+}
+
+.reform-column-footer .total-timeline {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+    font-weight: var(--font-medium);
+}
+
+/* Key Differences Summary */
+.reform-summary {
+    margin: var(--spacing-2xl) 0;
+}
+
+.reform-summary h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.reform-diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.reform-diff-card {
+    background: var(--background-alt);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--accent);
+}
+
+.reform-diff-card h4 {
+    font-size: var(--text-lg);
+    color: var(--accent-dark);
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.reform-diff-card p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.reform-diff-card.unchanged {
+    border-left-color: var(--warning);
+}
+
+.reform-diff-card.unchanged h4 {
+    color: var(--warning);
+}
+
+/* Resolution info box */
+.resolution-info {
+    background: var(--background-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.resolution-info h3 {
+    font-size: var(--text-lg);
+    color: var(--primary-dark);
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.resolution-info p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Legal Basis Section */
+.reform-law-section {
+    margin: var(--spacing-2xl) 0;
+}
+
+.reform-law-section h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.reform-law-card {
+    background: var(--background-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.reform-law-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.reform-law-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.reform-law-header h3 {
+    font-size: var(--text-xl);
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.reform-law-date {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    margin: var(--spacing-xs) 0 0 0;
+}
+
+.reform-law-title {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--primary-lighter);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary);
+    line-height: 1.6;
+}
+
+.reform-law-card > p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.reform-law-card h4 {
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    font-weight: var(--font-semibold);
+}
+
+.reform-law-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.reform-law-list li {
+    padding: var(--spacing-md);
+    background: var(--background);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+    padding-left: var(--spacing-xl);
+}
+
+.reform-law-list li::before {
+    content: '✓';
+    position: absolute;
+    left: var(--spacing-md);
+    top: var(--spacing-md);
+    color: var(--primary);
+    font-weight: var(--font-bold);
+}
+
+/* Status Section */
+.reform-status-section {
+    margin: var(--spacing-2xl) 0;
+}
+
+.reform-status-card {
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+}
+
+.reform-status-card.warning {
+    background: var(--warning-light);
+    border: 2px solid var(--warning);
+}
+
+.reform-status-icon {
+    font-size: 2.5rem;
+}
+
+.reform-status-card h3 {
+    font-size: var(--text-xl);
+    color: var(--warning);
+    margin: 0;
+    font-weight: var(--font-bold);
+}
+
+.reform-status-card p {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    margin: 0;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Recommendation Section */
+.reform-recommendation-section {
+    margin: var(--spacing-2xl) 0;
+}
+
+.reform-recommendation-section h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.reform-recommendation-card {
+    background: var(--background-alt);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.reform-recommendation-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--accent-light);
+}
+
+.reform-recommendation-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.reform-recommendation-header h3 {
+    font-size: var(--text-xl);
+    color: var(--accent-dark);
+    margin: 0;
+}
+
+.reform-recommendation-card > p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.reform-recommendation-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.reform-recommendation-list li {
+    padding: var(--spacing-md);
+    background: var(--background);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.reform-recommendation-conclusion {
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--accent);
+}
+
+.reform-recommendation-conclusion p {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+    font-weight: var(--font-medium);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .reform-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .reform-header h1 {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (max-width: 767px) {
+    .reform-diff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reform-step {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .reform-step-num {
+        width: 30px;
+        height: 30px;
+        font-size: var(--text-sm);
+    }
+}

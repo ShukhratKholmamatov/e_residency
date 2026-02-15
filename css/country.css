@@ -78,8 +78,8 @@
 }
 
 .country-header-flag {
-  width: 160px;
-  height: 110px;
+  width: 200px;
+  height: 135px;
   margin: 0 auto var(--spacing-lg) auto;
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -402,4 +402,63 @@
 .tax-table tbody td:last-child {
   color: var(--accent);
   font-weight: var(--font-bold);
+}
+
+/* Download Guide Section */
+.download-guide {
+  background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.download-guide h3 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.download-guide p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-lg) 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+}
+
+.download-btn.disabled {
+  background: var(--background-gray);
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.download-btn .btn-icon {
+  font-size: var(--text-xl);
 }

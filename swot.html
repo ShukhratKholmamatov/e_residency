@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme-preference')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SWOT Analysis of e-residency programs and IT company incentives across Estonia, Uzbekistan, Kazakhstan, and Georgia.">
     <title>SWOT Analysis | E-Residency & IT Company Comparison</title>
@@ -45,9 +46,13 @@
                 </div>
 
                 <a href="comparison.html">Comparison</a>
+                <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                 <a href="swot.html" class="active">SWOT Analysis</a>
                 <a href="about.html">About</a>
             </div>
+
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -566,7 +571,10 @@
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="comparison.html">Comparison</a>
+                        <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                         <a href="swot.html">SWOT Analysis</a>
+                <a href="uzbekistan-reform.html">UZ Reform</a>
                         <a href="about.html">About & Sources</a>
                     </div>
                 </div>
@@ -583,5 +591,6 @@
     <script src="js/navigation.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/swot-slider.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

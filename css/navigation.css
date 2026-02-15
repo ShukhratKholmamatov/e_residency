@@ -128,6 +128,27 @@
   border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--background-gray);
+  border-color: var(--primary);
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: none;

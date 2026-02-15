@@ -1,0 +1,252 @@
+/* Steps Page - Quick Steps Grid */
+
+/* Header */
+.steps-header {
+    background: var(--background-alt);
+    color: var(--text-primary);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.steps-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.steps-header p {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+}
+
+/* Grid wrapper - horizontal scroll on mobile */
+.steps-wrapper {
+    overflow-x: auto;
+    padding: var(--spacing-2xl) 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-lg);
+    min-width: 1100px;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Country column */
+.steps-country {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Country header with flag */
+.steps-country-header {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background: var(--background-alt);
+    border-bottom: 2px solid var(--border);
+}
+
+.steps-country-header .flag-img {
+    width: 80px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.steps-country-header h2 {
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.steps-country-header .program-label {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+/* Steps list */
+.steps-list {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Individual step card */
+.step-card {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--background);
+    transition: box-shadow var(--transition-fast);
+}
+
+.step-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Step number circle */
+.step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-sm);
+    font-weight: var(--font-bold);
+    margin-top: 2px;
+}
+
+/* Step content */
+.step-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.step-content h4 {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.step-content p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+/* Duration & cost badges */
+.step-badges {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.step-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+}
+
+.step-badge.duration {
+    background: var(--primary-lighter);
+    color: var(--primary-dark);
+}
+
+.step-badge.cost {
+    background: var(--badge-cost-bg);
+    color: var(--badge-cost-text);
+}
+
+.step-badge.visit {
+    background: var(--badge-visit-bg);
+    color: var(--badge-visit-text);
+}
+
+/* Agency/responsible org reminder */
+.step-meta {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--border);
+    font-size: 0.68rem;
+    color: var(--text-tertiary);
+    line-height: 1.4;
+}
+
+.step-meta span {
+    display: block;
+}
+
+/* Total cost footer */
+.steps-total {
+    padding: var(--spacing-md);
+    background: var(--primary-lighter);
+    border-top: 2px solid var(--primary-light);
+    text-align: center;
+    margin-top: auto;
+}
+
+.steps-total .total-label {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.steps-total .total-amount {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--primary-dark);
+}
+
+.steps-total .total-timeline {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: var(--font-medium);
+}
+
+/* Detail link */
+.steps-detail-link {
+    display: block;
+    text-align: center;
+    padding: var(--spacing-sm);
+    font-size: var(--text-sm);
+    color: var(--primary);
+    text-decoration: none;
+    border-top: 1px solid var(--border);
+    transition: background var(--transition-fast);
+}
+
+.steps-detail-link:hover {
+    background: var(--primary-lighter);
+}
+
+/* Scroll hint for mobile */
+.scroll-hint {
+    display: none;
+    text-align: center;
+    padding: var(--spacing-sm);
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+@media (max-width: 1200px) {
+    .scroll-hint {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-header h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .steps-grid {
+        min-width: 900px;
+        gap: var(--spacing-md);
+    }
+}

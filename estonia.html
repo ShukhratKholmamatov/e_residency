@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme-preference')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Complete guide to Estonia's e-Residency program 2026. Learn about costs, tax benefits, remote management, and company formation process.">
     <title>Estonia E-Residency Program 2026 | Complete Guide</title>
@@ -45,9 +46,14 @@
                 </div>
 
                 <a href="comparison.html">Comparison</a>
+                <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                 <a href="swot.html">SWOT Analysis</a>
+                <a href="uzbekistan-reform.html">UZ Reform</a>
                 <a href="about.html">About</a>
             </div>
+
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -278,10 +284,10 @@
 
             <div class="process-steps">
                 <div class="process-step" data-step="1">
-                    <h4>Apply for E-Residency</h4>
-                    <p>Submit your application online at e-resident.gov.ee with a passport copy, photo, and motivation letter.</p>
+                    <h4>Submit E-Residency Application</h4>
+                    <p>Fill the form online at e-resident.gov.ee, upload your passport copy and photo, and pay the €150 state fee.</p>
                     <div class="process-step-meta">
-                        <span>⏱️ <strong>Duration:</strong> reviewing application – 30 days, production & delivery – 2-5 weeks</span>
+                        <span>⏱️ <strong>Duration:</strong> ~1 hour (same day)</span>
                         <span>💰 <strong>Cost:</strong> €150 state fee</span>
                     </div>
                     <div class="process-step-docs">
@@ -297,11 +303,29 @@
                 </div>
 
                 <div class="process-step" data-step="2">
+                    <h4>Background Check & Approval</h4>
+                    <p>The Police & Border Guard Board reviews your application. They check criminal background, sanctions lists, and risk profile. You will receive an email once approved.</p>
+                    <div class="process-step-meta">
+                        <span>⏱️ <strong>Duration:</strong> 3–8 weeks (typically 3–4 weeks if smooth, up to 8 if extra checks needed)</span>
+                        <span>💰 <strong>Cost:</strong> Included in state fee</span>
+                    </div>
+                </div>
+
+                <div class="process-step" data-step="3">
+                    <h4>Card Production & Delivery</h4>
+                    <p>After approval, your e-Residency card is produced (~1–2 weeks) and delivered to your chosen embassy or pickup point (~1–2 weeks).</p>
+                    <div class="process-step-meta">
+                        <span>⏱️ <strong>Duration:</strong> 2–4 weeks after approval</span>
+                        <span>💰 <strong>Cost:</strong> Included in state fee</span>
+                    </div>
+                </div>
+
+                <div class="process-step" data-step="4">
                     <h4>Collect Your E-Residency Card</h4>
-                    <p>Once approved, visit your chosen Estonian embassy or pickup point to collect your digital ID card. You'll provide fingerprints and receive your card, USB reader, and PIN codes.</p>
+                    <p>Visit your chosen Estonian embassy or pickup point to collect your digital ID card. You'll provide fingerprints and receive your card, USB reader, and PIN codes.</p>
                     <div class="process-step-meta">
                         <span>⏱️ <strong>Duration:</strong> Same day (appointment)</span>
-                        <span>💰 <strong>Cost:</strong> 0</span>
+                        <span>💰 <strong>Cost:</strong> Free</span>
                     </div>
                     <div class="process-step-docs">
                         <h5>What You'll Receive:</h5>
@@ -313,7 +337,7 @@
                     </div>
                 </div>
 
-                <div class="process-step" data-step="3">
+                <div class="process-step" data-step="5">
                     <h4>Register Your OÜ (Company)</h4>
                     <p>Register a private limited company (OÜ) online through the Business Register portal. The process takes 15-60 minutes.</p>
                     <div class="process-step-meta">
@@ -331,7 +355,7 @@
                     </div>
                 </div>
 
-                <div class="process-step" data-step="4">
+                <div class="process-step" data-step="6">
                     <h4>Open a Business Bank Account</h4>
                     <p>Apply for a business bank account. Options include Estonian banks (LHV), EMIs (Wise, Payoneer), or specialized fintech.</p>
                     <div class="process-step-meta">
@@ -349,7 +373,7 @@
                     </div>
                 </div>
 
-                <div class="process-step" data-step="5">
+                <div class="process-step" data-step="7">
                     <h4>Set Up Accounting & Compliance</h4>
                     <p>Engage an accounting service provider or use online accounting software. All tax filings are done digitally.</p>
                     <div class="process-step-meta">
@@ -359,8 +383,13 @@
                 </div>
             </div>
 
-            <h3>Total Estimated Costs</h3>
+            <h3>Total Estimated Costs & Timeline</h3>
             <div class="info-grid">
+                <div class="info-card">
+                    <h4>⏱ Total Timeline</h4>
+                    <p><strong>~6-13 weeks</strong> from application to fully operational (background check 3-8 wks + card delivery 2-4 wks + company + bank)</p>
+                </div>
+
                 <div class="info-card">
                     <h4>Initial Setup</h4>
                     <p>€415 - €615 (e-residency + company + contact person)</p>
@@ -527,6 +556,16 @@
             <p class="text-secondary mt-xl"><em>Last updated: February 2026. Tax rates and requirements subject to change. Always verify current information with official sources.</em></p>
         </section>
 
+            <!-- Download Guide -->
+            <div class="download-guide">
+                <h3>📄 Download Estonia E-Residency Guide</h3>
+                <p>Get the complete step-by-step PDF guide for Estonian e-Residency and company setup.</p>
+                <a href="assets/images/docs/Estonia _ e-Residency & Company Setup Guide.pdf" download class="download-btn">
+                    <span class="btn-icon">⬇️</span>
+                    Download PDF Guide
+                </a>
+            </div>
+
             <!-- CTA -->
             <div class="text-center mt-xl mb-xl">
                 <a href="comparison.html" class="btn btn-primary btn-large">Compare with Other Countries →</a>
@@ -581,6 +620,8 @@
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="comparison.html">Comparison</a>
+                        <a href="steps.html">Quick Steps</a>
+                        <a href="uzbekistan-reform.html">UZ Reform</a>
                         <a href="about.html">About & Sources</a>
                     </div>
                 </div>
@@ -596,5 +637,7 @@
     <!-- JavaScript -->
     <script src="js/navigation.js"></script>
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/scroll-spy.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

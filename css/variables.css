@@ -97,16 +97,89 @@
   --z-tooltip: 600;
 }
 
-/* Dark mode variables (optional for future) */
+/* ===== Dark Mode ===== */
+
+/* User-toggled dark mode */
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-dark: #60a5fa;
+  --primary-light: #1e3a5f;
+  --primary-lighter: #172554;
+
+  --accent: #34d399;
+  --accent-dark: #6ee7b7;
+  --accent-light: #064e3b;
+
+  --warning: #fbbf24;
+  --warning-light: #422006;
+  --danger: #f87171;
+  --danger-light: #450a0a;
+  --success: #34d399;
+  --success-light: #064e3b;
+
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --background: #0f172a;
+  --background-alt: #1e293b;
+  --background-gray: #334155;
+  --border: #334155;
+  --border-light: #475569;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+  /* Badge colors for dark mode */
+  --badge-cost-bg: #064e3b;
+  --badge-cost-text: #6ee7b7;
+  --badge-visit-bg: #450a0a;
+  --badge-visit-text: #fca5a5;
+}
+
+/* Light mode badge defaults */
+:root {
+  --badge-cost-bg: #ecfdf5;
+  --badge-cost-text: #065f46;
+  --badge-visit-bg: #fef2f2;
+  --badge-visit-text: #991b1b;
+}
+
+/* System preference fallback (only when no user preference is set) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    --primary: #3b82f6;
+    --primary-dark: #60a5fa;
+    --primary-light: #1e3a5f;
+    --primary-lighter: #172554;
+
+    --accent: #34d399;
+    --accent-dark: #6ee7b7;
+    --accent-light: #064e3b;
+
+    --warning: #fbbf24;
+    --warning-light: #422006;
+    --danger: #f87171;
+    --danger-light: #450a0a;
+    --success: #34d399;
+    --success-light: #064e3b;
+
     --text-primary: #f9fafb;
     --text-secondary: #d1d5db;
     --text-tertiary: #9ca3af;
-    --background: #111827;
-    --background-alt: #1f2937;
-    --background-gray: #374151;
-    --border: #374151;
-    --border-light: #4b5563;
+    --background: #0f172a;
+    --background-alt: #1e293b;
+    --background-gray: #334155;
+    --border: #334155;
+    --border-light: #475569;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+    --badge-cost-bg: #064e3b;
+    --badge-cost-text: #6ee7b7;
+    --badge-visit-bg: #450a0a;
+    --badge-visit-text: #fca5a5;
   }
 }
